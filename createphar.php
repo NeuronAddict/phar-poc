@@ -34,8 +34,5 @@ $phar->setMetadata($obj);
 $phar->stopBuffering();
 
 echo 'file writed in ' . $poc . "\n";
-
-// use this to execute poc
-if(!file_exists('phar://'.$poc)) echo "ERROR : file not found\n";
-else echo 'You should see a file /tmp/proof.txt'."\n";
+echo "use command 'php test.php ".$poc. "' to test phar with file_exists\n";
 
