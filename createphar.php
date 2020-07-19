@@ -36,5 +36,6 @@ $phar->stopBuffering();
 echo 'file writed in ' . $poc . "\n";
 
 // use this to execute poc
-// file_exists('phar:///./test.phar');
+if(!file_exists('phar://'.$poc)) echo "ERROR : file not found\n";
+else echo 'You should see a file /tmp/proof.txt'."\n";
 
